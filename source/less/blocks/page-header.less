@@ -1,0 +1,399 @@
+.page-header {
+  @media (min-width: 940px) {
+    background-image: url("../img/back-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: @blue;
+    background-position: center;
+    min-height: 853px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
+  }
+}
+
+.page-header__nav {
+  background-color: @blue;
+
+  @media (min-width: 940px) {
+    background-color: fade(@black, 30%);
+  }
+}
+
+.page-header__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 940px) {
+    flex-direction: row;
+    min-height: 110px;
+    justify-content: space-between;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.page-header__top-line-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 69px;
+  border-bottom: 1px solid @black;
+  min-width: 320px;
+  max-width: 659px;
+  padding: 0 20px;
+
+  @media (min-width: 660px) {
+    min-width: 660px;
+    max-width: 940px;
+    min-height: 109px;
+  }
+
+  @media (min-width: 940px) {
+    max-width: 147px;
+    min-width: 146px;
+    display: block;
+    padding: 27px 0 0;
+    min-height: 110px;
+    margin: 0;
+    border: none;
+  }
+}
+
+.page-header__logo {
+  width: 74px;
+  height: 23px;
+  display: block;
+  fill: @white;
+
+  &:hover {
+    fill: @red;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 660px) {
+    width: 145px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: 940px) {
+    width: 147px;
+  }
+}
+
+.page-header__main-desktop-logo {
+  @media (min-width: 320px) and (max-width: 659px) {
+    margin: -17px 0 0 -72px;
+  }
+}
+
+.page-header__burger {
+  fill: @white;
+  width: 50px;
+  height: 24px;
+  display: none;
+}
+
+.page-header__toggle-btn {
+  display: none;
+  position: relative;
+  width: 23px;
+  height: 23px;
+  padding: 0;
+  cursor: pointer;
+  background-color: @blue;
+  border: none;
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: @white;
+    top: -3px;
+    left: 10px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: @white;
+    top: -3px;
+    left: 10px;
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @red;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+    background-color: @white;
+  }
+
+  @media (min-width: 940px) {
+    display: none;
+  }
+}
+
+.page-header__list-flex {
+  @media (min-width: 940px) {
+    width: 620px;
+  }
+}
+
+.page-header__item {
+  min-height: 64px;
+  border-top: 1px solid fade(@white, 15%);
+  border-bottom: 1px solid @black;
+  min-width: 320px;
+  max-width: 659px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 660px) {
+    min-width: 660px;
+    max-width: 939px;
+  }
+
+  @media (min-width: 940px) {
+    min-width: auto;
+    border: none;
+    display: block;
+    padding-top: 48px;
+  }
+}
+
+.page-header__link {
+  text-decoration: none;
+  color: @white;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: @red;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 940px) {
+    display: block;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: none;
+  }
+}
+
+.page-header__slogan {
+  background-image: url("../img/hend.png"), url("../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px auto, cover;
+  background-position: left bottom, 0 -65px;
+  min-height: 396px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/hend@2x.png"), url("../img/back-mobile@2x.jpg");
+    background-size: 320px auto, cover;
+  }
+
+  @media (min-width: 660px) {
+    background-image: url("../img/hend-tablet.png"), url("../img/back-tablet.jpg");
+    min-height: 619px;
+    background-position: right bottom, 0 -110px;
+    background-size: 660px auto, cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hend-tablet@2x.png"), url("../img/back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: 940px) {
+    background-image: none;
+  }
+}
+
+.page-header__slogan-wraper {
+  @media (min-width: 940px) {
+    background-image: url("../img/hend-desktop.png");
+    background-size: 1050px auto;
+    min-height: 743px;
+    background-position: 18px 100%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hend-desctop@2x.png");
+    }
+  }
+}
+
+.page-header__heading {
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 29px;
+  text-align: center;
+  color: @white;
+  padding: 26px 0 0 0;
+
+  @media (min-width: 660px) {
+    padding: 93px 0 0 0;
+    font-size: 40px;
+    width: 300px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 48px;
+  }
+
+  @media (min-width: 940px) {
+    font-size: 50px;
+    line-height: 68px;
+    padding: 100px 0 0 0;
+  }
+}
+
+.page-header__download-app {
+  min-height: 271px;
+  background-color: @blue;
+  padding-top: 28px;
+
+  @media (min-width: 660px) {
+    margin-top: -352px;
+    background-color: transparent;
+    padding-top: 0;
+  }
+
+  @media (min-width: 940px) {
+    margin-top: -404px;
+  }
+}
+
+.page-header__link-btn {
+  min-width: 280px;
+  max-width: 300px;
+  border: 3px solid fade(@white, 20%);
+  display: block;
+  border-radius: 29px;
+  padding: 15.5px 0;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  background-color: @blue;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    background-color: @white;
+    color: @red;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 660px) {
+    border: 3px solid white;
+    background-color: transparent;
+  }
+
+  @media (min-width: 940px) {
+    font-size: 21px;
+  }
+}
+
+.page-header__list-app {
+  list-style: none;
+  margin: 32px 0 20px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @media (min-width: 660px) {
+    width: 300px;
+    margin: 46px 0 33px;
+    padding: 0 16px;
+  }
+
+  @media (min-width: 940px) {
+    margin: 67px 0 54px;
+    padding: 0 14px;
+  }
+}
+
+.page-header__iphone {
+  width: 47px;
+  height: 56px;
+  display: block;
+  background-position: center;
+  background-image: url("../img/apple-logo.svg");
+  background-repeat: no-repeat;
+}
+
+.page-header__android {
+  width: 47px;
+  height: 56px;
+  display: block;
+  background-position: 2px 6px;
+  background-image: url("../img/android-logo.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: 660px) and (max-width: 939px) {
+    background-position: 1px 6px;
+  }
+}
+
+.page-header__windows {
+  width: 47px;
+  height: 56px;
+  display: block;
+  background-position: 2px 13px;
+  background-image: url("../img/microsoft-logo.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: 660px) and (max-width: 939px) {
+    background-position: 1px 9px;
+  }
+}
+
+.page-header__text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: @white;
+
+  @media (min-width: 660px) {
+    width: 300px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

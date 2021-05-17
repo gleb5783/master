@@ -1,0 +1,242 @@
+.price {
+  background: linear-gradient(178deg, @white 33px, @grey 34px);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 480px;
+
+  @media (min-width: 660px) {
+    background: linear-gradient(178deg, @white 33px, @grey 34px);
+    min-height: 384px;
+  }
+
+  @media (min-width: 940px) {
+    min-height: 534px;
+    background: linear-gradient(178deg, @white 94px, @grey 95px);
+  }
+}
+
+.price__wraper {
+  display: flex;
+  flex-direction: column;
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 156px;
+
+  @media (min-width: 660px) and (max-width: 939px) {
+    max-width: 660px;
+    margin-top: 98px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 320px) and (max-width: 659px) {
+    position: absolute;
+    width: 840px;
+    margin-top: 95px;
+    overflow-x: hidden;
+    transform: translateX(-260px);
+  }
+}
+
+.price__wraper .reviews__toggle-btn {
+  @media (min-width: 660px) {
+    display: none;
+  }
+}
+
+.price__table {
+  table-layout: auto;
+
+  @media (min-width: 660px) {
+    border-collapse: collapse;
+  }
+}
+
+.price__table-header {
+  @media (min-width: 660px) {
+    border-collapse: inherit;
+  }
+}
+
+.price__head {
+  position: relative;
+  width: 235px;
+  height: 95px;
+  text-transform: uppercase;
+  padding: 0;
+  background-color: @blue;
+  color: @white;
+
+  @media (min-width: 660px) and (max-width: 939px) {
+    width: 152px;
+    height: 75px;
+    padding: 10px 0;
+  }
+}
+
+.price__option-text {
+  padding-left: 13px;
+
+  @media (min-width: 320px) and (max-width: 659px) {
+    display: none;
+  }
+}
+
+.price_head-hidden {
+  @media (min-width: 320px) and (max-width: 659px) {
+    display: none;
+  }
+}
+
+.price__text {
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  padding: 8px 0 18px 0;
+  margin: 0;
+
+  @media (min-width: 320px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 660px) {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  @media (min-width: 940px) {
+    font-size: 24px;
+  }
+}
+
+.price__head:first-child {
+  background-color: transparent;
+}
+
+.price__hit {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.price__heading {
+  margin: 0;
+  padding: 9px 0 0 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+
+  @media (min-width: 600px) {
+    padding: 2px 0;
+    font-size: 16px;
+  }
+
+  @media (min-width: 320px) {
+    font-size: 16px;
+  }
+}
+
+.price__option {
+  width: 235px;
+  height: 59px;
+  color: @blue;
+  border-collapse: collapse;
+  border: 1px solid @grey;
+  background-color: @white;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+
+  @media (min-width: 660px) and (max-width: 939px) {
+    width: 152px;
+    font-size: 14px;
+    height: 43px;
+    border: 2px solid @dark-grey;
+  }
+}
+
+.price__option-check {
+  float: right;
+  margin-right: 17px;
+  display: inline-block;
+  margin-top: 3px;
+
+  @media (min-width: 660px) and (max-width: 939px) {
+    margin-left: 61px;
+    margin-top: 4px;
+    margin-right: 0;
+    float: none;
+  }
+
+  @media (min-width: 940px) {
+    float: none;
+    margin-left: 100px;
+  }
+}
+
+.price__span-mob {
+  display: none;
+
+  @media (min-width: 320px) and (max-width: 659px) {
+    display: inline-block;
+    font-size: 14px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 30px;
+    padding-left: 20px;
+  }
+}
+
+.price__hit img {
+  @media (min-width: 660px) and (max-width: 939px) {
+    width: 61px;
+    height: 61px;
+  }
+}
+
+.price__toggle-btn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin-top: 30px;
+  gap: 16px;
+}
+
+.price__slider-toggle {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: @blue;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.price__slider-toggle--active {
+  border: 3px solid @blue;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  background-color: @white;
+}
+
+.price__btn-group {
+  margin-top: 418px;
+
+  @media (min-width: 660px) {
+    display: none;
+  }
+}
