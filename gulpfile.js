@@ -37,6 +37,15 @@ const html = () => {
 
 exports.html = html;
 
+//Scripts
+const scripts = () => {
+  return gulp.src("source/js/script.js")
+  .pipe(gulp.dest("build/js"))
+  .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
+
 // Styles
 
 const styles = () => {
@@ -70,7 +79,7 @@ exports.createWebp = createWebp;
 
 const copy = () => {
   return gulp.src([
-    "source/fonts/*{woff2,woff}",
+    "source/fonts/*.ttf",
     "source/*.ico",
     "source/img/*{jpg,png,svg}"
   ],{
@@ -124,7 +133,7 @@ const watcher = () => {
 exports.default = gulp.series(
   clean,
   gulp.parallel(
-    styles, html, sprite, copy, createWebp
+    styles, html, sprite, copy, createWebp, scripts
   ),
   gulp.series(
     server, watcher
@@ -136,7 +145,7 @@ exports.default = gulp.series(
 const build = gulp.series(
   clean,
   gulp.parallel(
-    styles, html, sprite, copy, images, createWebp
+    styles, html, sprite, copy, images, createWebp, scripts
   )
 )
 

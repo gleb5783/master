@@ -1,0 +1,138 @@
+.header__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  border-bottom: 1px solid fade(@black, 10%);
+
+  @media (min-width: 720px) {
+    justify-content: space-evenly;
+    min-height: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: space-between;
+  }
+}
+
+.header__list-item {
+  display: flex;
+}
+
+.header__link {
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  @media (min-width: 720px) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.header__link-e {
+  background-image: url('../../img/logo-e-mob.svg');
+  background-repeat: no-repeat;
+  margin: 0 15px;
+
+  @media (min-width: 720px) {
+    background-image: url('../../img/logo-e-desc.svg');
+    margin: 5px 22px 0 31px;
+  }
+
+  @media (min-width: 1000px) {
+    margin: 5px 22px 0 26px;
+  }
+}
+
+.header__link-m {
+  background-image: url('../../img/logo-m-mob.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 26px;
+  height: 26px;
+
+  @media (min-width: 720px) {
+    background-image: url('../../img/logo-m-desc.svg');
+    width: 35px;
+    height: 35px;
+    margin: 5px 0 0 0;
+  }
+}
+
+.header__list-item-search {
+  margin: 0 14px 0 18px;
+
+  @media (max-width: 719px) {
+    display: none;
+  }
+
+  @media (min-width: 1000px) {
+    margin: 0 14px 0 22px;
+    flex-basis: 81%;
+  }
+}
+
+.header__search {
+  outline: none;
+  border: none;
+  min-width: 515px;
+  padding-left: 16px;
+  padding-top: 4px;
+
+  @media (min-width: 1000px) {
+    min-width: 788px;
+    width: 100%;
+    padding-left: 10px;
+  }
+}
+
+.header__list-item-burger {
+  @media (min-width: 720px) {
+    margin-right: 20px;
+  }
+}
+
+.header__btn {
+  display: block;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-image: url('../../img/burger.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: @white;
+  margin: 0 15px 0 0;
+}
+
+.header__red-line {
+  height: 3px;
+  background-color: @red;
+  display: none;
+
+  @media (min-width: 720px) {
+    display: block;
+    width: 149px;
+    margin-top: -1px;
+  }
+
+  @media (min-width: 1000px) {
+    width: 207px;
+  }
+}
+
+.header__article {
+  background-color: @article-grey;
+  padding: 5px 0 5px 15px;
+  color: fade(@black, 70%);
+  font-size: 10px;
+  line-height: 14px;
+
+  @media (min-width: 720px) {
+    display: none;
+  }
+}
