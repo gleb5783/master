@@ -1,7 +1,7 @@
 {
-  "name": "pink-21",
+  "name": "test",
   "private": true,
-  "description": "Личный проект «Пинк» от HTML Academy",
+  "description": "test",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.0.2",
