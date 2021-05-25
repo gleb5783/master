@@ -14,9 +14,12 @@
   }
 
   @media (min-width: 1000px) {
+    & p {
+      max-width: 320px;
+    }
     align-items: flex-start;
     gap: 20px;
-    justify-content: start;
+    justify-content: space-between;
   }
 }
 
@@ -90,8 +93,13 @@
   display: flex;
   justify-content: center;
   margin: 40px 0;
+  min-width: 290px;
+  max-width: 640px;
+  width: 100%;
 
   @media (min-width: 720px) {
+    max-width: none;
+    min-width: none;
     order: 3;
     margin: 44px 0 81px;
   }
@@ -102,7 +110,7 @@
   }
 
   @media (min-width: 1400px) {
-    flex-basis: 48%;
+    flex-basis: 42%;
   }
 }
 
@@ -113,6 +121,8 @@
 }
 
 .new-design__text {
+  max-width: 145px;
+  width: 100%;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -121,6 +131,7 @@
   line-height: 17px;
 
   @media (min-width: 720px) {
+    max-width: 349px;
     font-size: 14px;
     line-height: 21px;
   }
